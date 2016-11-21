@@ -35,4 +35,45 @@ timedatectl set-ntp true
 timedatectl status
 ```
 
-## Partition
+## Partitions
+Use `cgdisk` or `cfdisk`.  `fdisk -l` will give you quick info about the disks available.
+
+### efi
+100M 
+
+### boot
+UEFI requires 512M or greater or 200M for BIOS.  This should also be a partition and not a LV.
+
+### LVM
+The rest of the disk should be assigned as a LVM, if you intend to use LVM.
+
+## Filesystems and LV's
+`lsblk -f` checks for mounted filesystems
+
+### /swap
+8G, or the size of your RAM
+
+### /boot
+UEFI requires 512M or greater or 200M for BIOS.  This should also be a partition and not a LV.
+
+### /home
+10G for a start, if using LVM it can be expanded later. This stores all user data.
+
+### /var
+8G is ideal.  Store ABS tree and pacman cache.
+
+### /
+Root partition, at least 15G
+
+### /data
+Not needed but can be used for shared data.
+
+
+## Format Partitions
+```
+mkfs.ext4 /dev/mapper/vg0-root
+mkswap /dev/mapper/vg0-swap
+```
+
+## Create Partitions
+
