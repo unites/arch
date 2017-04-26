@@ -38,6 +38,8 @@ timedatectl status
 ## Partitions
 Use `cgdisk` or `cfdisk`.  `fdisk -l` will give you quick info about the disks available.
 
+Note, the "Linux LVM" filesystem Type won't work, you need to use "Linux Filesystems".
+
 ### efi
 100M 
 
