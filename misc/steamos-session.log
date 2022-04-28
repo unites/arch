@@ -1,0 +1,84 @@
+[lux@steam ~]$ cat steamos-session.log
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+libpng warning: iCCP: known incorrect sRGB profile
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+touch: cannot touch '/home/lux/.steam/root/config/SteamAppData.vdf': No such file or directory
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+Running Steam on arch rolling 64-bit
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+STEAM_RUNTIME is enabled automatically
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+Steam runtime environment up-to-date!
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+Can't find 'steam-runtime-check-requirements', continuing anyway
+WARNING: Using default/fallback debugger launch
+/home/lux/.local/share/Steam/ubuntu12_32/steam -tenfoot -steamos -fulldesktopres
+ERROR: ld.so: object '/usr/lib/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+Installing breakpad exception handler for appid(steam)/version(0)
+[2021-08-22 16:08:00] Startup - updater built Jul 20 2021 22:25:51
+ILocalize::AddFile() failed to load file "public/steambootstrapper_english.txt".
+src/steamexe/updateui_xwin.cpp (1494) : Assertion Failed: UpdateUI libfreetype.so.6 not found
+Installing breakpad exception handler for appid(steam)/version(1.0)
+ERROR: ld.so: object '/usr/lib/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored.
+ERROR: ld.so: object '/usr/lib32/libmodeswitch_inhibitor.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+crash_20210822160800_3.dmp[1139]: Uploading dump (out-of-process)
+/tmp/dumps/crash_20210822160800_3.dmp
+src/steamexe/updateui_xwin.cpp (1494) : Assertion Failed: UpdateUI libfreetype.so.6 not found
+src/steamexe/main.cpp (818) : Assertion Failed: failed to initialize update status ui, or create initial window
+crash_20210822160800_3.dmp[1139]: Finished uploading minidump (out-of-process): success = no
+crash_20210822160800_3.dmp[1139]: error: Couldn't resolve host name
+crash_20210822160800_3.dmp[1139]: file ''/tmp/dumps/crash_20210822160800_3.dmp'', upload no: ''Couldn't resolve host name''
+src/steamexe/main.cpp (818) : Assertion Failed: failed to initialize update status ui, or create initial window

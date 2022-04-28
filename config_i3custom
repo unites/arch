@@ -1,0 +1,355 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+# i3-gaps in sway
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
+smart_gaps on
+default_border pixel 3
+# ide_edge_borders both
+
+# Lock Screen Background Settings
+# set $lock_screen $HOME/.config/img/3px-tile-1920x1080.png
+# set $lock_screen $HOME/.config/img/retina-wood-1920x1080.png
+
+# workspace_auto_back_and_forth yes
+# font pango:monospace 8
+font pango:TerminessTTF Nerd Font 14 
+#font pango:DejaVu Sans Mono 8
+
+# Mod Key Assignmentd
+set $mod Mod4
+set $app Mod1
+set $cmd Ctrl
+set $shf Shift
+
+# Window Sizes
+set $hd resize set 1280 720
+set $wxga resize set 1280 800
+set $wxga_plus resize set 1440 900
+set $sxga resize set 1280 1024
+set $sxga_plus resize set 1400×1050
+set $hd_plus resize set 1600 900
+set $fhd resize set 1920 1080
+
+# ScratchPa easyeffects
+for_window [class="copyq"] floating enable, $wxga_plus
+for_window [class="retroarch"] floating enable
+for_window [class="Org.gnome.Nautilus"] floating enable, $hd_plus
+for_window [class="obsidian"] floating enable, move scratchpad, $hd_plus
+for_window [class="Steam"] floating enable, $hd_plus
+for_window [class="easyeffects"] floating enable, $hd_plus
+for_window [class="copyq"] floating enable, $hd_plus
+for_window [class="Blueman-manager"] floating enable, $hd
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+bindsym $mod+space focus mode_toggle
+
+exec --no-startup-id xss-lock -l -- i3lock -t -i $lock_screen
+exec --no-startup-id mpd
+exec --no-startup-id picom
+#exec --no-startup-id gpaste-client start
+#exec --no-startup-id feh --bg-center $HOME/.config/img/wolf-uw.jpg
+exec --no-startup-id feh --bg-tile $lock_screen
+exec --no-startup-id redshift -l 39.0284:-94.6545
+exec --no-startup-id dunst
+#exec --no-startup-id blueman-applet
+# exec --no-startup-id "conky -b -c ~/.config/conky/info.conf"
+exec --no-startup-id alacritty --config-file $HOME/.config/alacritty/nix_clear.yml  
+# exec --no-startup-id "devmon --no-gui" # devmon --mount /dev/sdb1 to mount devices,  devmon -c to umount last
+exec --no-startup-id i3lock -t -i $lock_screen
+#exec --no-startup-id nextcloud --background
+# exec --no-startup-id mapwacom -d "Wacom Intuos S Pen stylus" -s "HDMI-0"
+# exec --no-startup-id Obsidian
+# exec --no-startup-id nm-applet
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+# Direction Keys
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty --config-file $HOME/.config/alacritty/nix.yml    
+set $term-alt alacritty --config-file $HOME/.config/alacritty/nix_clear.yml     
+set $menu "rofi -combi-modi window,drun,run -show combi"
+set $menu-run "rofi -combi-modi window,drun,run -theme solarized -show combi "
+
+bindsym $mod+Return exec $term 
+bindsym $mod+$shf+Return exec $term-alt
+bindsym $mod+r exec $menu
+#bindsym $mod+$shf+r exec $menu-run
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# Move the focused window with the same, but add $shf
+bindsym $mod+$shf+$left move left
+bindsym $mod+$shf+$down move down
+bindsym $mod+$shf+$up move up
+bindsym $mod+$shf+$right move right
+
+bindsym $mod+$shf+a move left
+bindsym $mod+$shf+s move down
+bindsym $mod+$shf+w move up
+bindsym $mod+$shf+d move right
+bindsym $mod+$shf+e resize shrink width 20px
+bindsym $mod+$shf+q resize grow width 20px
+bindsym $mod+$shf+r resize grow height 20px
+bindsym $mod+$shf+f resize shrink height 20px
+
+# Resize Windows using Arrows
+bindsym $mod+$shf+Left resize shrink width 20px
+bindsym $mod+$shf+Down resize grow height 20px
+bindsym $mod+$shf+Up resize shrink height 20px
+bindsym $mod+$shf+Right resize grow width 20px
+
+#navigate workspaces next / previous
+bindsym $mod+$cmd+Right workspace next
+bindsym $mod+$cmd+Left workspace prev
+
+# bindsym $mod+s workspace next
+# bindsym $mod+a workspace prev
+bindsym $mod+$cmd+v scratchpad show
+bindsym $mod+Tab workspace back_and_forth
+
+# # focus the parent container
+# bindsym $mod+z focus parent
+# # focus the child container
+# bindsym $mod+x focus child
+
+bindsym $mod+$cmd+z floating toggle
+bindsym $mod+$cmd+c move scratchpad
+bindsym $mod+e layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+q layout toggle split
+# split in vertical orientation
+bindsym $mod+t split toggle
+
+# bindsym $mod+g exec pavucontrol
+
+# kill focused window
+bindsym $mod+$cmd+q kill
+# reload the configuration file
+bindsym $mod+$cmd+r reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+$cmd+$shf+r restart
+bindsym $mod+$cmd+$shf+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+$cmd+l exec i3lock -t -i $lock_screen
+bindsym $mod+$cmd+$shf+l exec systemctl suspend
+bindsym $mod+$cmd+n exec nvidia-settings
+
+bindsym $mod+$cmd+s exec maim -s -u | xclip -selection clipboard -t image/png -i
+bindsym $mod+$cmd+d exec maim -s -u | tee ~/Images/$(date +%s).png | xclip -selection clipboard -t image/png
+bindsym $mod+$cmd+a exec peek
+
+# Multimedia keys bind to MPD
+bindsym XF86AudioPlay  exec "mpc toggle;$HOME/.config/bin/song_info.sh"
+bindsym XF86AudioStop  exec "mpc stop"
+bindsym XF86AudioNext  exec "mpc next;$HOME/.config/bin/song_info.sh"
+bindsym XF86AudioPrev  exec "mpc prev;$HOME/.config/bin/song_info.sh"
+bindsym XF86AudioPause exec "mpc pause"
+bindsym $shf+XF86AudioPause exec "$HOME/.config/bin/song_info.sh"
+bindsym XF86AudioRaiseVolume exec vol_master up
+bindsym XF86AudioLowerVolume exec vol_master down
+bindsym $shf+XF86AudioRaiseVolume exec vol_mpd up
+bindsym $shf+XF86AudioLowerVolume exec vol_mpd down
+bindsym $mod+Up exec vol_master up
+bindsym $mod+Down exec vol_master down
+bindsym $mod+Right exec "mpc next;$HOME/.config/bin/song_info.sh"
+bindsym $mod+Left exec "mpc prev;$HOME/.config/bin/song_info.sh"
+
+# Pull sinks
+# pacmd list-sinks|egrep -i 'index:|name:'
+bindsym $mod+$cmd+1 exec pactl set-default-sink alsa_output.usb-FIIO_FiiO_USB_DAC-E10-01.analog-stereo
+bindsym $mod+$cmd+2 exec pactl set-default-sink alsa_output.usb-Kingston_HyperX_Cloud_Stinger_Core_Wireless___7.1_000000000000-00.analog-stereo
+# bindsym $mod+$cmd+3 exec pactl set-default-sink alsa_output.usb-Generic_USB_Audio-00.analog-stereo
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places. : ": ": ":     "爵 
+# set $ws1 "1:  爵   "
+# set $ws2 "2:     "
+# set $ws3 "3:     "
+# set $ws4 "4:     "
+# set $ws5 "5:     "
+# set $ws6 "6:     "
+# set $ws7 "7:     "
+# set $ws8 "8:     "
+# set $ws9 "9:     "
+# set $ws10 "10:     "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# # switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+z workspace number $ws1
+bindsym $mod+x workspace number $ws2
+bindsym $mod+c workspace number $ws3
+bindsym $mod+v workspace number $ws4
+bindsym $mod+b workspace number $ws5
+bindsym $mod+n workspace number $ws6
+bindsym $mod+m workspace number $ws7
+bindsym $mod+comma workspace number $ws8
+bindsym $mod+period workspace number $ws9
+bindsym $mod+question workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+$shf+1 move container to workspace number $ws1
+bindsym $mod+$shf+2 move container to workspace number $ws2
+bindsym $mod+$shf+3 move container to workspace number $ws3
+bindsym $mod+$shf+4 move container to workspace number $ws4
+bindsym $mod+$shf+5 move container to workspace number $ws5
+bindsym $mod+$shf+6 move container to workspace number $ws6
+bindsym $mod+$shf+7 move container to workspace number $ws7
+bindsym $mod+$shf+8 move container to workspace number $ws8
+bindsym $mod+$shf+9 move container to workspace number $ws9
+bindsym $mod+$shf+0 move container to workspace number $ws10
+
+bindsym $mod+$shf+z move container to workspace number $ws1
+bindsym $mod+$shf+x move container to workspace number $ws2
+bindsym $mod+$shf+c move container to workspace number $ws3
+bindsym $mod+$shf+v move container to workspace number $ws4
+bindsym $mod+$shf+b move container to workspace number $ws5
+bindsym $mod+$shf+n move container to workspace number $ws6
+bindsym $mod+$shf+m move container to workspace number $ws7
+bindsym $mod+$shf+comma move container to workspace number $ws8
+bindsym $mod+$shf+period move container to workspace number $ws9
+bindsym $mod+$shf+question move container to workspace number $ws10
+
+# To find monitor names
+# xrandr --current
+set $cmon "HDMI-0"
+#set $cmon "DVI-I-1" 
+set $lmon "DVI-D-0" 
+# monitors
+workspace $ws1 output $cmon
+workspace $ws2 output $cmon
+workspace $ws3 output $cmon
+workspace $ws4 output $cmon
+workspace $ws5 output $cmon
+workspace $ws6 output $cmon
+workspace $ws7 output $lmon
+workspace $ws8 output $lmon
+workspace $ws9 output $lmon 
+workspace $ws10 output $lmon
+
+# To find Class/window names:
+# xprop | grep -i 'class'
+for_window [class="Pavucontrol"] floating enable, resize set 900 900
+for_window [class="nm-connection-editor"] floating enable
+for_window [class="Nvidia-settings"] floating enable
+for_window [class="Gnome-system-monitor"] floating enable, resize set 900 900
+for_window [class="gnome-logs"] floating enabl
+for_window [class="Ksystemlog"] floating enable, resize set 900 900
+
+assign [class="retroarch"] $ws10
+
+set $power_mode "Power"
+bindsym $mod+p mode $power_mode
+mode $power_mode {
+    bindsym 1         exec notifications_toggle on, mode "default"
+    bindsym 2         exec notifications_toggle off, mode "default"
+    bindsym o         exec systemctl poweroff, mode "default"
+    bindsym r         exec systemctl reboot , mode "default"
+    bindsym s         exec systemctl suspend, lllllmode "default"
+    bindsym l         exec i3lock -t -i $lock_screen, mode "default"
+    bindsym b         exec xset dpms force standby, mode "default"
+    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h         exec systemctl hibernate, mode "default" 
+    bindsym d         exec dpms_toggle, mode "default" 
+    bindsym l         exec i3lock -t -i $lock_screen, mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+
+set $app_launcher "App Launcher"
+bindsym $mod+a mode $app_launcher
+mode $app_launcher {
+    bindsym 1 exec --no-startup-id tea_timer 1, mode "default"
+    bindsym 2 exec --no-startup-id tea_timer 2, mode "default"
+    bindsym 3 exec --no-startup-id tea_timer 3, mode "default"
+    bindsym 4 exec --no-startup-id tea_timer 4, mode "default"
+    bindsym 5 exec --no-startup-id tea_timer 5, mode "default"
+    bindsym a exec pavucontrol, mode "default"
+    # bindsym e exec easyeffects, mode "default"
+    # bindsym e exec Outlook, mode "default"
+    bindsym x exec xrdp gram, mode "default"
+    bindsym n exec nautilus, mode "default"
+    bindsym d exec flatpak run md.obsidian.Obsidian, mode "default"
+    bindsym t exec teams, mode "default"
+    bindsym s exec subl, mode "default"
+    bindsym o exec flatpak run com.obsproject.Studio
+    bindsym p exec flatpak run com.parsecgaming.parsec, mode "default"
+    bindsym l         exec i3lock -t -i $lock_screen, mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+
+set $edge microsoft-edge-dev
+set $chrome google-chrome-stable
+set $chromium chromium
+set $brave brave-browser
+set $firefox firefox
+
+set $web_launcher "Web Launcher"
+bindsym $mod+s mode $web_launcher
+mode $web_launcher {
+    bindsym 1 exec --no-startup-id tea_timer 1, mode "default"
+    bindsym 2 exec --no-startup-id tea_timer 2, mode "default"
+    bindsym c exec $chrome, mode "default"
+    bindsym b exec $brave, mode "default"
+    bindsym $shf+b exec $brave --user-data-dir=$HOME/.app/brave_media, mode "default"
+    bindsym f exec $firefox, mode "default"
+    # bindsym s exec $brave --app=https://ice.pyre.one/ --user-data-dir=$HOME/.app/brave_coder --class="iCode", mode "default"
+    bindsym s exec $brave --profile-directory=Default --app-id=genkbmbgjejbfejnofonljkboajhpgdg, mode "default"
+    bindsym v exec $brave --proxy-server="10.1.1.10:3127" --incognito --user-data-dir=$HOME/.app/brave_vpn, mode "default"
+    #bindsym n exec $brave --proxy-server="10.1.1.10:3127" --user-data-dir=$HOME/.app/brave_vpn, mode "default"
+    bindsym w exec $brave --proxy-server="socks5://127.0.0.1:8080" --user-data-dir=$HOME/.app/brave_work, mode "default"
+    bindsym m exec $brave --app=https://outlook.office.com/ --user-data-dir=$HOME/.app/brave_media --class="iOutlook", mode "default"
+    bindsym p exec $brave --app=http://10.1.1.10:32400/web/index.html --user-data-dir=$HOME/.app/brave_media --class="iPlex", mode "default"
+    bindsym n exec $brave --app=https://www.netflix.com/browse --user-data-dir=$HOME/.app/brave_media --class="iNetflix", mode "default"
+    bindsym g exec $brave --app=https://play.geforcenow.com/ --user-data-dir=$HOME/.app/brave_media --class="iGeforce", mode "default"
+    bindsym y exec $brave --app=https://youtube.com/ --user-data-dir=$HOME/.app/brave_media --class="iYouTube", mode "default"
+    bindsym r exec $brave --app=https://rpg.sim.pub/ --user-data-dir=$HOME/.app/brave_rpg --class="iRPG", mode "default"
+    bindsym t exec $brave --app=http://10.1.1.4:30000/ --user-data-dir=$HOME/.app/brave_dev --class="iRPGtest", mode "default"
+    bindsym d exec $brave --app=https://www.dndbeyond.com/ --user-data-dir=$HOME/.app/brave_media --class="iDnD", mode "default"
+    bindsym l         exec i3lock -t -i $lock_screen, mode "default"
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+bindsym $mod+g exec --no-startup-id gpaste-client ui
+
+# Toggle Mic
+#bindsym Scroll_Lock exec --no-startup-id mic_toggle_pipewire
+bindsym Scroll_Lock exec --no-startup-id mic_toggle_pipewire
+
+# Push to talk
+bindsym Print exec --no-startup-id mic_on_pipewire
+bindsym --release Print exec --no-startup-id mic_off_pipewire
+
+# exec --no-startup-id i3-msg 'workspace $ws8;exec chromium --app=http://10.1.1.10:32400/web/index.html --user-data-dir=$HOME/.app/iPlex --class="iPlex", mode "default"'
+# exec --no-startup-id picom
+
+# --proxy-server="socks5://foobar:66"
+
